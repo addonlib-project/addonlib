@@ -1,5 +1,5 @@
 import { EventEmitter } from 'events';
-import { addonResourcesType } from '.';
+import { addonResourcesType } from './addonResourcesType';
 
 export default abstract class AbstractAddon extends EventEmitter {
   protected static id: string;
@@ -12,6 +12,7 @@ export default abstract class AbstractAddon extends EventEmitter {
   protected static tags: Array<string> = [];
   protected static dependencies: Array<string> = [];
 
+  /** */
   private resources;
 
   public constructor(resources: addonResourcesType = {}) {

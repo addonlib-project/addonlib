@@ -42,7 +42,7 @@ export default class AddonManagerCenter extends EventEmitter {
       !this.haveManager(manager) &&
       !this.haveManagerByType(manager.getType()) &&
       this.managers.push(manager);
-    if (result) this.emit('addManager', this.managers, manager);
+    if (result) this.emit('addManager', this, manager);
     return result;
   }
 
@@ -50,7 +50,7 @@ export default class AddonManagerCenter extends EventEmitter {
     const result =
       this.haveManager(manager) &&
       this.managers.splice(this.getManagerIndex(manager), 1);
-    if (result) this.emit('removeManager', this.managers, manager);
+    if (result) this.emit('removeManager', this, manager);
     return result;
   }
 
@@ -76,7 +76,7 @@ export default class AddonManagerCenter extends EventEmitter {
         manager.haveCorrectType(addon)
       );
       result = !!manager && manager.add(addon);
-      if (result) this.emit('add', manager?.getAll(), addon);
+      if (result) this.emit('add', this, addon);
     }
     return result;
   }
@@ -88,7 +88,7 @@ export default class AddonManagerCenter extends EventEmitter {
         manager.haveById(addon.getId())
       );
       result = !!manager?.remove(addon);
-      if (result) this.emit('remove', manager?.getAll(), addon);
+      if (result) this.emit('remove', this, addon);
     }
     return result;
   }

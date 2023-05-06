@@ -1,6 +1,9 @@
 import { EventEmitter } from 'events';
 import AbstractAddon from './AbstractAddon';
 
+/**
+ * Only accepts Addons that are of the same type
+ */
 export default abstract class AbstractAddonManager extends EventEmitter {
   protected static type: string;
 
