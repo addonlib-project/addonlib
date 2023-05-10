@@ -16,7 +16,7 @@ export default abstract class AbstractAddon<
   X extends basicAddonSettings = basicAddonSettings
 > extends EventEmitter {
   private details!: T;
-  private settings: X;
+  private settings!: X;
   private settingsDefinition!: optionDefinition<X>;
 
   public constructor(
@@ -27,9 +27,9 @@ export default abstract class AbstractAddon<
     super();
     this.details = details as T;
     this.settingsDefinition = settingsDefinition as optionDefinition<X>;
-    this.settings = optionUtils.optionDefinitionToOption(
-      this.settingsDefinition
-    );
+    this.settings =
+      this.settingsDefinition &&
+      optionUtils.optionDefinitionToOption(this.settingsDefinition);
     this.on('install', this.onInstall);
     this.on('update', this.onUpdate);
     this.on('load', this.onLoad);

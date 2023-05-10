@@ -16,14 +16,14 @@
 
 #### Type parameters
 
-| Name | Type                                   |
-| :--- | :------------------------------------- |
-| `T`  | extends `Record`<`string`, `unknown`\> |
+| Name | Type |
+| :------ | :------ |
+| `T` | extends `Record`<`string`, `unknown`\> |
 
 #### Parameters
 
-| Name         | Type                                                       |
-| :----------- | :--------------------------------------------------------- |
+| Name | Type |
+| :------ | :------ |
 | `definition` | [`optionDefinition`](../modules.md#optiondefinition)<`T`\> |
 
 #### Returns
@@ -32,4 +32,4 @@
 
 #### Defined in
 
-src/utils/optionUtils.ts:3
+[src/utils/optionUtils.ts:3](https://github.com/addonlib-project/addonlib/blob/55287ef/src/utils/optionUtils.ts#L3)

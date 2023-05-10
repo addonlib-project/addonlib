@@ -6,11 +6,11 @@
 
 ## Type parameters
 
-| Name | Type                                                                                                                            |
-| :--- | :------------------------------------------------------------------------------------------------------------------------------ |
-| `T`  | extends [`basicAddonDetails`](../modules.md#basicaddondetails) = [`basicAddonDetails`](../modules.md#basicaddondetails)         |
-| `V`  | extends [`basicAddonResources`](../modules.md#basicaddonresources) = [`basicAddonResources`](../modules.md#basicaddonresources) |
-| `X`  | extends [`basicAddonSettings`](../modules.md#basicaddonsettings) = [`basicAddonSettings`](../modules.md#basicaddonsettings)     |
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`basicAddonDetails`](../modules.md#basicaddondetails) = [`basicAddonDetails`](../modules.md#basicaddondetails) |
+| `V` | extends [`basicAddonResources`](../modules.md#basicaddonresources) = [`basicAddonResources`](../modules.md#basicaddonresources) |
+| `X` | extends [`basicAddonSettings`](../modules.md#basicaddonsettings) = [`basicAddonSettings`](../modules.md#basicaddonsettings) |
 
 ## Hierarchy
 
@@ -79,18 +79,18 @@
 
 #### Type parameters
 
-| Name | Type                                                                                                                    |
-| :--- | :---------------------------------------------------------------------------------------------------------------------- |
-| `T`  | extends [`basicAddonDetails`](../modules.md#basicaddondetails) = [`basicAddonDetails`](../modules.md#basicaddondetails) |
-| `V`  | extends `Record`<`string`, `unknown`\> = `Record`<`string`, `unknown`\>                                                 |
-| `X`  | extends `Record`<`string`, `unknown`\> = `Record`<`string`, `unknown`\>                                                 |
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`basicAddonDetails`](../modules.md#basicaddondetails) = [`basicAddonDetails`](../modules.md#basicaddondetails) |
+| `V` | extends `Record`<`string`, `unknown`\> = `Record`<`string`, `unknown`\> |
+| `X` | extends `Record`<`string`, `unknown`\> = `Record`<`string`, `unknown`\> |
 
 #### Parameters
 
-| Name                  | Type                                                       |
-| :-------------------- | :--------------------------------------------------------- |
-| `resources`           | `V`                                                        |
-| `details?`            | `T`                                                        |
+| Name | Type |
+| :------ | :------ |
+| `resources` | `V` |
+| `details?` | `T` |
 | `settingsDefinition?` | [`optionDefinition`](../modules.md#optiondefinition)<`X`\> |
 
 #### Overrides
@@ -99,7 +99,7 @@ EventEmitter.constructor
 
 #### Defined in
 
-[src/AbstractAddon.ts:22](https://github.com/addonlib-project/addonlib/blob/ca970aa/src/AbstractAddon.ts#L22)
+[src/AbstractAddon.ts:22](https://github.com/addonlib-project/addonlib/blob/55287ef/src/AbstractAddon.ts#L22)
 
 ## Properties
 
@@ -109,9 +109,9 @@ EventEmitter.constructor
 
 #### Defined in
 
-[src/AbstractAddon.ts:18](https://github.com/addonlib-project/addonlib/blob/ca970aa/src/AbstractAddon.ts#L18)
+[src/AbstractAddon.ts:18](https://github.com/addonlib-project/addonlib/blob/55287ef/src/AbstractAddon.ts#L18)
 
----
+___
 
 ### resources
 
@@ -119,9 +119,9 @@ EventEmitter.constructor
 
 #### Defined in
 
-[src/AbstractAddon.ts:23](https://github.com/addonlib-project/addonlib/blob/ca970aa/src/AbstractAddon.ts#L23)
+[src/AbstractAddon.ts:23](https://github.com/addonlib-project/addonlib/blob/55287ef/src/AbstractAddon.ts#L23)
 
----
+___
 
 ### settings
 
@@ -129,9 +129,9 @@ EventEmitter.constructor
 
 #### Defined in
 
-[src/AbstractAddon.ts:19](https://github.com/addonlib-project/addonlib/blob/ca970aa/src/AbstractAddon.ts#L19)
+[src/AbstractAddon.ts:19](https://github.com/addonlib-project/addonlib/blob/55287ef/src/AbstractAddon.ts#L19)
 
----
+___
 
 ### settingsDefinition
 
@@ -139,9 +139,9 @@ EventEmitter.constructor
 
 #### Defined in
 
-[src/AbstractAddon.ts:20](https://github.com/addonlib-project/addonlib/blob/ca970aa/src/AbstractAddon.ts#L20)
+[src/AbstractAddon.ts:20](https://github.com/addonlib-project/addonlib/blob/55287ef/src/AbstractAddon.ts#L20)
 
----
+___
 
 ### captureRejectionSymbol
 
@@ -155,7 +155,7 @@ EventEmitter.captureRejectionSymbol
 
 node_modules/@types/node/events.d.ts:328
 
----
+___
 
 ### captureRejections
 
@@ -171,7 +171,7 @@ EventEmitter.captureRejections
 
 node_modules/@types/node/events.d.ts:333
 
----
+___
 
 ### defaultMaxListeners
 
@@ -185,7 +185,7 @@ EventEmitter.defaultMaxListeners
 
 node_modules/@types/node/events.d.ts:334
 
----
+___
 
 ### errorMonitor
 
@@ -221,10 +221,10 @@ v0.1.26
 
 #### Parameters
 
-| Name        | Type                           |
-| :---------- | :----------------------------- |
-| `eventName` | `string` \| `symbol`           |
-| `listener`  | (...`args`: `any`[]) => `void` |
+| Name | Type |
+| :------ | :------ |
+| `eventName` | `string` \| `symbol` |
+| `listener` | (...`args`: `any`[]) => `void` |
 
 #### Returns
 
@@ -238,7 +238,7 @@ EventEmitter.addListener
 
 node_modules/@types/node/events.d.ts:354
 
----
+___
 
 ### emit
 
@@ -288,10 +288,10 @@ v0.1.26
 
 #### Parameters
 
-| Name        | Type                 |
-| :---------- | :------------------- |
+| Name | Type |
+| :------ | :------ |
 | `eventName` | `string` \| `symbol` |
-| `...args`   | `any`[]              |
+| `...args` | `any`[] |
 
 #### Returns
 
@@ -305,7 +305,7 @@ EventEmitter.emit
 
 node_modules/@types/node/events.d.ts:610
 
----
+___
 
 ### error
 
@@ -313,8 +313,8 @@ node_modules/@types/node/events.d.ts:610
 
 #### Parameters
 
-| Name            | Type    |
-| :-------------- | :------ |
+| Name | Type |
+| :------ | :------ |
 | `...parameters` | `any`[] |
 
 #### Returns
@@ -323,9 +323,9 @@ node_modules/@types/node/events.d.ts:610
 
 #### Defined in
 
-[src/AbstractAddon.ts:78](https://github.com/addonlib-project/addonlib/blob/ca970aa/src/AbstractAddon.ts#L78)
+[src/AbstractAddon.ts:78](https://github.com/addonlib-project/addonlib/blob/55287ef/src/AbstractAddon.ts#L78)
 
----
+___
 
 ### eventNames
 
@@ -363,7 +363,7 @@ EventEmitter.eventNames
 
 node_modules/@types/node/events.d.ts:673
 
----
+___
 
 ### getDetails
 
@@ -375,9 +375,9 @@ node_modules/@types/node/events.d.ts:673
 
 #### Defined in
 
-[src/AbstractAddon.ts:40](https://github.com/addonlib-project/addonlib/blob/ca970aa/src/AbstractAddon.ts#L40)
+[src/AbstractAddon.ts:40](https://github.com/addonlib-project/addonlib/blob/55287ef/src/AbstractAddon.ts#L40)
 
----
+___
 
 ### getMaxListeners
 
@@ -402,7 +402,7 @@ EventEmitter.getMaxListeners
 
 node_modules/@types/node/events.d.ts:526
 
----
+___
 
 ### getResources
 
@@ -414,9 +414,9 @@ node_modules/@types/node/events.d.ts:526
 
 #### Defined in
 
-[src/AbstractAddon.ts:44](https://github.com/addonlib-project/addonlib/blob/ca970aa/src/AbstractAddon.ts#L44)
+[src/AbstractAddon.ts:44](https://github.com/addonlib-project/addonlib/blob/55287ef/src/AbstractAddon.ts#L44)
 
----
+___
 
 ### getSettings
 
@@ -428,9 +428,9 @@ node_modules/@types/node/events.d.ts:526
 
 #### Defined in
 
-[src/AbstractAddon.ts:52](https://github.com/addonlib-project/addonlib/blob/ca970aa/src/AbstractAddon.ts#L52)
+[src/AbstractAddon.ts:52](https://github.com/addonlib-project/addonlib/blob/55287ef/src/AbstractAddon.ts#L52)
 
----
+___
 
 ### getSettingsDefinition
 
@@ -442,9 +442,9 @@ node_modules/@types/node/events.d.ts:526
 
 #### Defined in
 
-[src/AbstractAddon.ts:48](https://github.com/addonlib-project/addonlib/blob/ca970aa/src/AbstractAddon.ts#L48)
+[src/AbstractAddon.ts:48](https://github.com/addonlib-project/addonlib/blob/55287ef/src/AbstractAddon.ts#L48)
 
----
+___
 
 ### listenerCount
 
@@ -461,10 +461,10 @@ v3.2.0
 
 #### Parameters
 
-| Name        | Type                 | Description                              |
-| :---------- | :------------------- | :--------------------------------------- |
+| Name | Type | Description |
+| :------ | :------ | :------ |
 | `eventName` | `string` \| `symbol` | The name of the event being listened for |
-| `listener?` | `Function`           | The event handler function               |
+| `listener?` | `Function` | The event handler function |
 
 #### Returns
 
@@ -478,7 +478,7 @@ EventEmitter.listenerCount
 
 node_modules/@types/node/events.d.ts:620
 
----
+___
 
 ### listeners
 
@@ -500,8 +500,8 @@ v0.1.26
 
 #### Parameters
 
-| Name        | Type                 |
-| :---------- | :------------------- |
+| Name | Type |
+| :------ | :------ |
 | `eventName` | `string` \| `symbol` |
 
 #### Returns
@@ -516,7 +516,7 @@ EventEmitter.listeners
 
 node_modules/@types/node/events.d.ts:539
 
----
+___
 
 ### log
 
@@ -524,8 +524,8 @@ node_modules/@types/node/events.d.ts:539
 
 #### Parameters
 
-| Name            | Type    |
-| :-------------- | :------ |
+| Name | Type |
+| :------ | :------ |
 | `...parameters` | `any`[] |
 
 #### Returns
@@ -534,9 +534,9 @@ node_modules/@types/node/events.d.ts:539
 
 #### Defined in
 
-[src/AbstractAddon.ts:70](https://github.com/addonlib-project/addonlib/blob/ca970aa/src/AbstractAddon.ts#L70)
+[src/AbstractAddon.ts:70](https://github.com/addonlib-project/addonlib/blob/55287ef/src/AbstractAddon.ts#L70)
 
----
+___
 
 ### off
 
@@ -550,10 +550,10 @@ v10.0.0
 
 #### Parameters
 
-| Name        | Type                           |
-| :---------- | :----------------------------- |
-| `eventName` | `string` \| `symbol`           |
-| `listener`  | (...`args`: `any`[]) => `void` |
+| Name | Type |
+| :------ | :------ |
+| `eventName` | `string` \| `symbol` |
+| `listener` | (...`args`: `any`[]) => `void` |
 
 #### Returns
 
@@ -567,7 +567,7 @@ EventEmitter.off
 
 node_modules/@types/node/events.d.ts:499
 
----
+___
 
 ### on
 
@@ -605,10 +605,10 @@ v0.1.101
 
 #### Parameters
 
-| Name        | Type                           | Description            |
-| :---------- | :----------------------------- | :--------------------- |
-| `eventName` | `string` \| `symbol`           | The name of the event. |
-| `listener`  | (...`args`: `any`[]) => `void` | The callback function  |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `eventName` | `string` \| `symbol` | The name of the event. |
+| `listener` | (...`args`: `any`[]) => `void` | The callback function |
 
 #### Returns
 
@@ -622,7 +622,7 @@ EventEmitter.on
 
 node_modules/@types/node/events.d.ts:385
 
----
+___
 
 ### onInstall
 
@@ -634,9 +634,9 @@ node_modules/@types/node/events.d.ts:385
 
 #### Defined in
 
-[src/AbstractAddon.ts:60](https://github.com/addonlib-project/addonlib/blob/ca970aa/src/AbstractAddon.ts#L60)
+[src/AbstractAddon.ts:60](https://github.com/addonlib-project/addonlib/blob/55287ef/src/AbstractAddon.ts#L60)
 
----
+___
 
 ### onLoad
 
@@ -648,9 +648,9 @@ node_modules/@types/node/events.d.ts:385
 
 #### Defined in
 
-[src/AbstractAddon.ts:64](https://github.com/addonlib-project/addonlib/blob/ca970aa/src/AbstractAddon.ts#L64)
+[src/AbstractAddon.ts:64](https://github.com/addonlib-project/addonlib/blob/55287ef/src/AbstractAddon.ts#L64)
 
----
+___
 
 ### onUninstall
 
@@ -662,9 +662,9 @@ node_modules/@types/node/events.d.ts:385
 
 #### Defined in
 
-[src/AbstractAddon.ts:68](https://github.com/addonlib-project/addonlib/blob/ca970aa/src/AbstractAddon.ts#L68)
+[src/AbstractAddon.ts:68](https://github.com/addonlib-project/addonlib/blob/55287ef/src/AbstractAddon.ts#L68)
 
----
+___
 
 ### onUnload
 
@@ -676,9 +676,9 @@ node_modules/@types/node/events.d.ts:385
 
 #### Defined in
 
-[src/AbstractAddon.ts:66](https://github.com/addonlib-project/addonlib/blob/ca970aa/src/AbstractAddon.ts#L66)
+[src/AbstractAddon.ts:66](https://github.com/addonlib-project/addonlib/blob/55287ef/src/AbstractAddon.ts#L66)
 
----
+___
 
 ### onUpdate
 
@@ -686,8 +686,8 @@ node_modules/@types/node/events.d.ts:385
 
 #### Parameters
 
-| Name       | Type                                                                                                                                                         |
-| :--------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name | Type |
+| :------ | :------ |
 | `previous` | [`AbstractAddon`](AbstractAddon.md)<[`basicAddonDetails`](../modules.md#basicaddondetails), `Record`<`string`, `unknown`\>, `Record`<`string`, `unknown`\>\> |
 
 #### Returns
@@ -696,9 +696,9 @@ node_modules/@types/node/events.d.ts:385
 
 #### Defined in
 
-[src/AbstractAddon.ts:62](https://github.com/addonlib-project/addonlib/blob/ca970aa/src/AbstractAddon.ts#L62)
+[src/AbstractAddon.ts:62](https://github.com/addonlib-project/addonlib/blob/55287ef/src/AbstractAddon.ts#L62)
 
----
+___
 
 ### once
 
@@ -734,10 +734,10 @@ v0.3.0
 
 #### Parameters
 
-| Name        | Type                           | Description            |
-| :---------- | :----------------------------- | :--------------------- |
-| `eventName` | `string` \| `symbol`           | The name of the event. |
-| `listener`  | (...`args`: `any`[]) => `void` | The callback function  |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `eventName` | `string` \| `symbol` | The name of the event. |
+| `listener` | (...`args`: `any`[]) => `void` | The callback function |
 
 #### Returns
 
@@ -751,7 +751,7 @@ EventEmitter.once
 
 node_modules/@types/node/events.d.ts:414
 
----
+___
 
 ### prependListener
 
@@ -776,10 +776,10 @@ v6.0.0
 
 #### Parameters
 
-| Name        | Type                           | Description            |
-| :---------- | :----------------------------- | :--------------------- |
-| `eventName` | `string` \| `symbol`           | The name of the event. |
-| `listener`  | (...`args`: `any`[]) => `void` | The callback function  |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `eventName` | `string` \| `symbol` | The name of the event. |
+| `listener` | (...`args`: `any`[]) => `void` | The callback function |
 
 #### Returns
 
@@ -793,7 +793,7 @@ EventEmitter.prependListener
 
 node_modules/@types/node/events.d.ts:638
 
----
+___
 
 ### prependOnceListener
 
@@ -816,10 +816,10 @@ v6.0.0
 
 #### Parameters
 
-| Name        | Type                           | Description            |
-| :---------- | :----------------------------- | :--------------------- |
-| `eventName` | `string` \| `symbol`           | The name of the event. |
-| `listener`  | (...`args`: `any`[]) => `void` | The callback function  |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `eventName` | `string` \| `symbol` | The name of the event. |
+| `listener` | (...`args`: `any`[]) => `void` | The callback function |
 
 #### Returns
 
@@ -833,7 +833,7 @@ EventEmitter.prependOnceListener
 
 node_modules/@types/node/events.d.ts:654
 
----
+___
 
 ### rawListeners
 
@@ -872,8 +872,8 @@ v9.4.0
 
 #### Parameters
 
-| Name        | Type                 |
-| :---------- | :------------------- |
+| Name | Type |
+| :------ | :------ |
 | `eventName` | `string` \| `symbol` |
 
 #### Returns
@@ -888,7 +888,7 @@ EventEmitter.rawListeners
 
 node_modules/@types/node/events.d.ts:569
 
----
+___
 
 ### removeAllListeners
 
@@ -908,8 +908,8 @@ v0.1.26
 
 #### Parameters
 
-| Name     | Type                 |
-| :------- | :------------------- |
+| Name | Type |
+| :------ | :------ |
 | `event?` | `string` \| `symbol` |
 
 #### Returns
@@ -924,7 +924,7 @@ EventEmitter.removeAllListeners
 
 node_modules/@types/node/events.d.ts:510
 
----
+___
 
 ### removeListener
 
@@ -1013,10 +1013,10 @@ v0.1.26
 
 #### Parameters
 
-| Name        | Type                           |
-| :---------- | :----------------------------- |
-| `eventName` | `string` \| `symbol`           |
-| `listener`  | (...`args`: `any`[]) => `void` |
+| Name | Type |
+| :------ | :------ |
+| `eventName` | `string` \| `symbol` |
+| `listener` | (...`args`: `any`[]) => `void` |
 
 #### Returns
 
@@ -1030,7 +1030,7 @@ EventEmitter.removeListener
 
 node_modules/@types/node/events.d.ts:494
 
----
+___
 
 ### setMaxListeners
 
@@ -1049,9 +1049,9 @@ v0.3.5
 
 #### Parameters
 
-| Name | Type     |
-| :--- | :------- |
-| `n`  | `number` |
+| Name | Type |
+| :------ | :------ |
+| `n` | `number` |
 
 #### Returns
 
@@ -1065,7 +1065,7 @@ EventEmitter.setMaxListeners
 
 node_modules/@types/node/events.d.ts:520
 
----
+___
 
 ### setSettings
 
@@ -1073,9 +1073,9 @@ node_modules/@types/node/events.d.ts:520
 
 #### Parameters
 
-| Name       | Type |
-| :--------- | :--- |
-| `settings` | `X`  |
+| Name | Type |
+| :------ | :------ |
+| `settings` | `X` |
 
 #### Returns
 
@@ -1083,9 +1083,9 @@ node_modules/@types/node/events.d.ts:520
 
 #### Defined in
 
-[src/AbstractAddon.ts:56](https://github.com/addonlib-project/addonlib/blob/ca970aa/src/AbstractAddon.ts#L56)
+[src/AbstractAddon.ts:56](https://github.com/addonlib-project/addonlib/blob/55287ef/src/AbstractAddon.ts#L56)
 
----
+___
 
 ### warn
 
@@ -1093,8 +1093,8 @@ node_modules/@types/node/events.d.ts:520
 
 #### Parameters
 
-| Name            | Type    |
-| :-------------- | :------ |
+| Name | Type |
+| :------ | :------ |
 | `...parameters` | `any`[] |
 
 #### Returns
@@ -1103,9 +1103,9 @@ node_modules/@types/node/events.d.ts:520
 
 #### Defined in
 
-[src/AbstractAddon.ts:74](https://github.com/addonlib-project/addonlib/blob/ca970aa/src/AbstractAddon.ts#L74)
+[src/AbstractAddon.ts:74](https://github.com/addonlib-project/addonlib/blob/55287ef/src/AbstractAddon.ts#L74)
 
----
+___
 
 ### getEventListeners
 
@@ -1142,10 +1142,10 @@ v15.2.0, v14.17.0
 
 #### Parameters
 
-| Name      | Type                                |
-| :-------- | :---------------------------------- |
+| Name | Type |
+| :------ | :------ |
 | `emitter` | `EventEmitter` \| `_DOMEventTarget` |
-| `name`    | `string` \| `symbol`                |
+| `name` | `string` \| `symbol` |
 
 #### Returns
 
@@ -1159,7 +1159,7 @@ EventEmitter.getEventListeners
 
 node_modules/@types/node/events.d.ts:299
 
----
+___
 
 ### listenerCount
 
@@ -1186,10 +1186,10 @@ Since v3.2.0 - Use `listenerCount` instead.
 
 #### Parameters
 
-| Name        | Type                 | Description          |
-| :---------- | :------------------- | :------------------- |
-| `emitter`   | `EventEmitter`       | The emitter to query |
-| `eventName` | `string` \| `symbol` | The event name       |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `emitter` | `EventEmitter` | The emitter to query |
+| `eventName` | `string` \| `symbol` | The event name |
 
 #### Returns
 
@@ -1203,7 +1203,7 @@ EventEmitter.listenerCount
 
 node_modules/@types/node/events.d.ts:271
 
----
+___
 
 ### on
 
@@ -1269,11 +1269,11 @@ v13.6.0, v12.16.0
 
 #### Parameters
 
-| Name        | Type                        | Description                              |
-| :---------- | :-------------------------- | :--------------------------------------- |
-| `emitter`   | `EventEmitter`              | -                                        |
-| `eventName` | `string`                    | The name of the event being listened for |
-| `options?`  | `StaticEventEmitterOptions` | -                                        |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `emitter` | `EventEmitter` | - |
+| `eventName` | `string` | The name of the event being listened for |
+| `options?` | `StaticEventEmitterOptions` | - |
 
 #### Returns
 
@@ -1289,7 +1289,7 @@ EventEmitter.on
 
 node_modules/@types/node/events.d.ts:254
 
----
+___
 
 ### once
 
@@ -1381,11 +1381,11 @@ v11.13.0, v10.16.0
 
 #### Parameters
 
-| Name        | Type                        |
-| :---------- | :-------------------------- |
-| `emitter`   | `_NodeEventTarget`          |
-| `eventName` | `string` \| `symbol`        |
-| `options?`  | `StaticEventEmitterOptions` |
+| Name | Type |
+| :------ | :------ |
+| `emitter` | `_NodeEventTarget` |
+| `eventName` | `string` \| `symbol` |
+| `options?` | `StaticEventEmitterOptions` |
 
 #### Returns
 
@@ -1403,11 +1403,11 @@ node_modules/@types/node/events.d.ts:194
 
 #### Parameters
 
-| Name        | Type                        |
-| :---------- | :-------------------------- |
-| `emitter`   | `_DOMEventTarget`           |
-| `eventName` | `string`                    |
-| `options?`  | `StaticEventEmitterOptions` |
+| Name | Type |
+| :------ | :------ |
+| `emitter` | `_DOMEventTarget` |
+| `eventName` | `string` |
+| `options?` | `StaticEventEmitterOptions` |
 
 #### Returns
 
@@ -1421,14 +1421,17 @@ EventEmitter.once
 
 node_modules/@types/node/events.d.ts:195
 
----
+___
 
 ### setMaxListeners
 
 ▸ `Static` **setMaxListeners**(`n?`, `...eventTargets`): `void`
 
 ```js
-const { setMaxListeners, EventEmitter } = require('events');
+const {
+  setMaxListeners,
+  EventEmitter
+} = require('events');
 
 const target = new EventTarget();
 const emitter = new EventEmitter();
@@ -1442,10 +1445,10 @@ v15.4.0
 
 #### Parameters
 
-| Name              | Type                                    | Description                                                                     |
-| :---------------- | :-------------------------------------- | :------------------------------------------------------------------------------ |
-| `n?`              | `number`                                | A non-negative number. The maximum number of listeners per `EventTarget` event. |
-| `...eventTargets` | (`EventEmitter` \| `_DOMEventTarget`)[] | -                                                                               |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `n?` | `number` | A non-negative number. The maximum number of listeners per `EventTarget` event. |
+| `...eventTargets` | (`EventEmitter` \| `_DOMEventTarget`)[] | - |
 
 #### Returns
 

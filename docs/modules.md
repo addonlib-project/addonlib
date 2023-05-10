@@ -28,23 +28,23 @@
 
 ### addonType
 
-Ƭ **addonType**: `"addon"` \| `string` & {}
+Ƭ **addonType**: ``"addon"`` \| `string` & {}
 
 #### Defined in
 
-src/addonTypes.ts:13
+[src/addonTypes.ts:13](https://github.com/addonlib-project/addonlib/blob/55287ef/src/addonTypes.ts#L13)
 
----
+___
 
 ### basicAddonDetails
 
-Ƭ **basicAddonDetails**: { `apiVersion`: `string` ; `authors`: `string`[] ; `dependencies`: `string`[] ; `description`: `string` ; `id`: `string` ; `tags`: `string`[] ; `title`: `string` ; `type`: [`addonType`](modules.md#addontype) ; `version`: `string` } & `Record`<`string`, `unknown`\>
+Ƭ **basicAddonDetails**: { `apiVersion`: `string` ; `authors`: `string`[] ; `dependencies`: `string`[] ; `description`: `string` ; `id`: `string` ; `tags`: `string`[] ; `title`: `string` ; `type`: [`addonType`](modules.md#addontype) ; `version`: `string`  } & `Record`<`string`, `unknown`\>
 
 #### Defined in
 
-src/addonTypes.ts:1
+[src/addonTypes.ts:1](https://github.com/addonlib-project/addonlib/blob/55287ef/src/addonTypes.ts#L1)
 
----
+___
 
 ### basicAddonManagerCenterDetails
 
@@ -52,19 +52,19 @@ src/addonTypes.ts:1
 
 #### Defined in
 
-src/addonManagerCenterTypes.ts:1
+[src/addonManagerCenterTypes.ts:1](https://github.com/addonlib-project/addonlib/blob/55287ef/src/addonManagerCenterTypes.ts#L1)
 
----
+___
 
 ### basicAddonManagerDetails
 
-Ƭ **basicAddonManagerDetails**: { `type`: [`addonType`](modules.md#addontype) } & `Record`<`string`, `unknown`\>
+Ƭ **basicAddonManagerDetails**: { `type`: [`addonType`](modules.md#addontype)  } & `Record`<`string`, `unknown`\>
 
 #### Defined in
 
-src/addonManagerTypes.ts:3
+[src/addonManagerTypes.ts:3](https://github.com/addonlib-project/addonlib/blob/55287ef/src/addonManagerTypes.ts#L3)
 
----
+___
 
 ### basicAddonResources
 
@@ -72,9 +72,9 @@ src/addonManagerTypes.ts:3
 
 #### Defined in
 
-src/addonTypes.ts:15
+[src/addonTypes.ts:15](https://github.com/addonlib-project/addonlib/blob/55287ef/src/addonTypes.ts#L15)
 
----
+___
 
 ### basicAddonSettings
 
@@ -82,9 +82,9 @@ src/addonTypes.ts:15
 
 #### Defined in
 
-src/addonTypes.ts:17
+[src/addonTypes.ts:17](https://github.com/addonlib-project/addonlib/blob/55287ef/src/addonTypes.ts#L17)
 
----
+___
 
 ### optionDefinition
 
@@ -92,10 +92,10 @@ src/addonTypes.ts:17
 
 #### Type parameters
 
-| Name | Type                                                                    |
-| :--- | :---------------------------------------------------------------------- |
-| `T`  | extends `Record`<`string`, `unknown`\> = `Record`<`string`, `unknown`\> |
+| Name | Type |
+| :------ | :------ |
+| `T` | extends `Record`<`string`, `unknown`\> = `Record`<`string`, `unknown`\> |
 
 #### Defined in
 
-src/optionTypes.ts:1
+[src/optionTypes.ts:1](https://github.com/addonlib-project/addonlib/blob/55287ef/src/optionTypes.ts#L1)
