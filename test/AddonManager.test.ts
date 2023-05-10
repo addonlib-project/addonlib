@@ -1,5 +1,6 @@
 import AbstractAddon from '../src/AbstractAddon';
 import AbstractAddonManager from '../src/AbstractAddonManager';
+import { basicAddonDetails } from '../src/addonTypes';
 
 class AddonManager1 extends AbstractAddonManager {
   static type = 'addon';
@@ -21,8 +22,6 @@ class Addon1 extends AbstractAddon {
   public onUninstall(): void {
     throw new Error('Method not implemented.');
   }
-  static id = 'addon1';
-  static type = 'addon';
 }
 
 class Addon2 extends AbstractAddon {
@@ -41,17 +40,23 @@ class Addon2 extends AbstractAddon {
   public onUninstall(): void {
     throw new Error('Method not implemented.');
   }
-  static id = 'addon2';
-  static type = 'other';
 }
 
 let addon2: AbstractAddon;
 let addon1: AbstractAddon;
 let addonManager: AbstractAddonManager;
 beforeAll(() => {
-  addon1 = new Addon1({});
-  addon2 = new Addon2({});
-  addonManager = new AddonManager1();
+  addon1 = new Addon1(
+    {},
+    { id: 'addon1', type: 'addon' } as basicAddonDetails,
+    {}
+  );
+  addon2 = new Addon2(
+    {},
+    { id: 'addon2', type: 'other' } as basicAddonDetails,
+    {}
+  );
+  addonManager = new AddonManager1([], { type: 'addon' });
 });
 
 describe('correctType', () => {
@@ -67,8 +72,8 @@ describe('correctType', () => {
 describe('getIndexById', () => {
   test('should have the correct order', () => {
     addonManager.set([addon1, addon2]);
-    expect(addonManager.getIndexById(addon1.getId())).toBe(0);
-    expect(addonManager.getIndexById(addon2.getId())).toBe(1);
+    expect(addonManager.getIndexById(addon1.getDetails().id)).toBe(0);
+    expect(addonManager.getIndexById(addon2.getDetails().id)).toBe(1);
   });
 
   afterEach(() => {
@@ -79,8 +84,8 @@ describe('getIndexById', () => {
 describe('getById', () => {
   test('should have the correct addons', () => {
     addonManager.set([addon1, addon2]);
-    expect(addonManager.getById(addon1.getId())).toBe(addon1);
-    expect(addonManager.getById(addon2.getId())).toBe(addon2);
+    expect(addonManager.getById(addon1.getDetails().id)).toBe(addon1);
+    expect(addonManager.getById(addon2.getDetails().id)).toBe(addon2);
     expect(addonManager.getById('xxxxxxxxxxxx')).toBeNull();
   });
 
@@ -92,8 +97,8 @@ describe('getById', () => {
 describe('haveById', () => {
   test('should have the correct returns', () => {
     addonManager.set([addon1, addon2]);
-    expect(addonManager.haveById(addon1.getId())).toBeTruthy();
-    expect(addonManager.haveById(addon2.getId())).toBeTruthy();
+    expect(addonManager.haveById(addon1.getDetails().id)).toBeTruthy();
+    expect(addonManager.haveById(addon2.getDetails().id)).toBeTruthy();
     expect(addonManager.haveById('xxxxxxxxxxxx')).toBeFalsy();
   });
 

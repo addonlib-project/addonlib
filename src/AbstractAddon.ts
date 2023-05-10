@@ -1,23 +1,35 @@
 import { EventEmitter } from 'events';
-import { addonResourcesType } from './addonResourcesType';
+import {
+  basicAddonDetails,
+  basicAddonResources,
+  basicAddonSettings,
+} from './addonTypes';
+import { optionDefinition } from './optionTypes';
+import { optionUtils } from '.';
 
-export default abstract class AbstractAddon extends EventEmitter {
-  protected static id: string;
-  protected static title: string;
-  protected static type: string = 'addon';
-  protected static version: string;
-  protected static apiVersion: string;
-  protected static authors: Array<string> = [];
-  protected static description: string;
-  protected static tags: Array<string> = [];
-  protected static dependencies: Array<string> = [];
+/**
+ * @noInheritDoc
+ */
+export default abstract class AbstractAddon<
+  T extends basicAddonDetails = basicAddonDetails,
+  V extends basicAddonResources = basicAddonResources,
+  X extends basicAddonSettings = basicAddonSettings
+> extends EventEmitter {
+  private details!: T;
+  private settings: X;
+  private settingsDefinition!: optionDefinition<X>;
 
-  /** */
-  private resources;
-
-  public constructor(resources: addonResourcesType = {}) {
+  public constructor(
+    private resources: V,
+    details?: T,
+    settingsDefinition?: optionDefinition<X>
+  ) {
     super();
-    this.resources = resources;
+    this.details = details as T;
+    this.settingsDefinition = settingsDefinition as optionDefinition<X>;
+    this.settings = optionUtils.optionDefinitionToOption(
+      this.settingsDefinition
+    );
     this.on('install', this.onInstall);
     this.on('update', this.onUpdate);
     this.on('load', this.onLoad);
@@ -25,89 +37,24 @@ export default abstract class AbstractAddon extends EventEmitter {
     this.on('uninstall', this.onUninstall);
   }
 
-  public static getId() {
-    return this.id;
-  }
-
-  public static getTitle() {
-    return this.title;
-  }
-
-  public static getType() {
-    return this.type;
-  }
-
-  public static getVersion() {
-    return this.version;
-  }
-
-  public static getApiVersion() {
-    return this.apiVersion;
-  }
-
-  public static getAuthors() {
-    return this.authors;
-  }
-
-  public static getDescription() {
-    return this.description;
-  }
-
-  static getTags() {
-    return this.tags;
-  }
-
-  public static getDependencies() {
-    return this.dependencies;
-  }
-
-  public getId(): string {
-    //@ts-ignore
-    return this.constructor.getId();
-  }
-
-  public getTitle(): string {
-    //@ts-ignore
-    return this.constructor.getTitle();
-  }
-
-  public getType(): string {
-    //@ts-ignore
-    return this.constructor.getType();
-  }
-
-  public getVersion(): string {
-    //@ts-ignore
-    return this.constructor.getVersion();
-  }
-
-  public getApiVersion(): string {
-    //@ts-ignore
-    return this.constructor.getApiVersion();
-  }
-
-  public getAuthors(): Array<string> {
-    //@ts-ignore
-    return this.constructor.getAuthors();
-  }
-
-  public getDescription(): string {
-    //@ts-ignore
-    return this.constructor.getDescription();
-  }
-
-  public getTags(): Array<string> {
-    //@ts-ignore
-    return this.constructor.getTags();
-  }
-
-  public getDependencies(): Array<string> {
-    //@ts-ignore
-    return this.constructor.getDependencies();
+  public getDetails() {
+    return this.details;
   }
 
   public getResources() {
     return this.resources;
+  }
+
+  public getSettingsDefinition() {
+    return this.settingsDefinition;
+  }
+
+  public getSettings() {
+    return this.settings;
+  }
+
+  public setSettings(settings: X) {
+    this.settings = settings;
   }
 
   public abstract onInstall(): void;

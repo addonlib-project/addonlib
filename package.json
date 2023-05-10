@@ -1,6 +1,6 @@
 {
   "name": "@addonlib/addonlib",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Basic library and conventions for addons and addon managers",
   "main": "dist/index.js",
   "prettier": "prettier-config-leopoldhub",
