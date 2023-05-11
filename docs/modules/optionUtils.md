@@ -14,16 +14,30 @@
 
 ▸ **optionDefinitionToOption**<`T`\>(`definition`): `T`
 
+Get valid options from optionDefinition variable
+
+**`Example`**
+
+```ts
+optionDefinitionToOption({ myOption: { type: 'string', defaultValue: 'a' } });
+```
+
+returns
+
+```
+{myOption: "a"}
+```
+
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Record`<`string`, `unknown`\> |
+| Name | Type                                   |
+| :--- | :------------------------------------- |
+| `T`  | extends `Record`<`string`, `unknown`\> |
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name         | Type                                                       |
+| :----------- | :--------------------------------------------------------- |
 | `definition` | [`optionDefinition`](../modules.md#optiondefinition)<`T`\> |
 
 #### Returns
@@ -32,4 +46,4 @@
 
 #### Defined in
 
-[src/utils/optionUtils.ts:3](https://github.com/addonlib-project/addonlib/blob/55287ef/src/utils/optionUtils.ts#L3)
+[src/utils/optionUtils.ts:19](https://github.com/addonlib-project/addonlib/blob/1822980/src/utils/optionUtils.ts#L19)

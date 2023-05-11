@@ -1,6 +1,6 @@
 {
   "name": "@addonlib/addonlib",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Basic library and conventions for addons and addon managers",
   "main": "dist/index.js",
   "prettier": "prettier-config-leopoldhub",
@@ -10,7 +10,8 @@
     "lint": "prettier --write . && prettier --check . && eslint",
     "test": "npm run lint && NODE_OPTIONS=--experimental-vm-modules jest",
     "build": "npm run clean && npm run test && npm run docs && npm run compile",
-    "docs": "typedoc"
+    "docs": "typedoc",
+    "example": "node dist/examples/example.js"
   },
   "keywords": [
     "lib",

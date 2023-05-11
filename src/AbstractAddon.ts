@@ -5,7 +5,7 @@ import {
   basicAddonSettings,
 } from './addonTypes';
 import { optionDefinition } from './optionTypes';
-import { optionUtils } from '.';
+import * as optionUtils from './utils/optionUtils';
 
 /**
  * @noInheritDoc
@@ -19,6 +19,15 @@ export default abstract class AbstractAddon<
   private settings!: X;
   private settingsDefinition!: optionDefinition<X>;
 
+  /**
+   * **DO NOT EXECUTE ANY ACTION IN THE CONSTRUCTOR**
+   *
+   * please use the on(Install, Update, Load, Unload, Uninstall) instead.
+   *
+   * @param resources resources needed by the addon (ex: instances)
+   * @param details
+   * @param settingsDefinition
+   */
   public constructor(
     private resources: V,
     details?: T,
@@ -57,14 +66,33 @@ export default abstract class AbstractAddon<
     this.settings = settings;
   }
 
+  /**
+   * Sould be triggered on the first installation of the addon.
+   */
   public abstract onInstall(): void;
 
+  /**
+   * Sould be triggered when installing over and replacing a previous version of the addon.
+   */
   public abstract onUpdate(previous: AbstractAddon): void;
 
+  /**
+   * Sould be triggered when enabling the addon (most likely the place where you want to do your stuff).
+   */
   public abstract onLoad(): void;
 
+  /**
+   * Should be triggered when disabling the addon.
+   *
+   * **YOU SHOULD STOP ANY RUNNING PROCESS AND CANCEL ANY TEMPORARY CHANGES YOUR ADDON MADE**
+   */
   public abstract onUnload(): void;
 
+  /**
+   * Should be triggered when uninstalling the addon.
+   *
+   * **NO TRACE OF THE ADDON OR RUNNING PROCESS SHOULD BE LEFT**
+   */
   public abstract onUninstall(): void;
 
   public log(...parameters: Array<any>) {

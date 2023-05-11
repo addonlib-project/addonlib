@@ -3,7 +3,8 @@ import AbstractAddon from './AbstractAddon';
 import { basicAddonManagerDetails } from './addonManagerTypes';
 
 /**
- * Only accepts Addons that are of the same type
+ * Manage and store addons.
+ *
  * @noInheritDoc
  */
 export default abstract class AbstractAddonManager<
@@ -14,10 +15,9 @@ export default abstract class AbstractAddonManager<
 
   private details!: T;
 
-  public constructor(addons: Array<V>, details?: T) {
+  public constructor(details?: T) {
     super();
     this.details = details as T;
-    addons.forEach(this.add);
   }
 
   public getDetails(): T {
@@ -49,6 +49,10 @@ export default abstract class AbstractAddonManager<
     return this.getIndexById(id) !== -1;
   }
 
+  /**
+   * @param addon should have the correct type and no addon with the same id should already exists.
+   * @returns true if correctly added.
+   */
   public add(addon: V) {
     const result =
       this.haveCorrectType(addon) &&
@@ -58,6 +62,10 @@ export default abstract class AbstractAddonManager<
     return !!result;
   }
 
+  /**
+   * @param addon should exists in the manager.
+   * @returns true if correctly removed.
+   */
   public remove(addon: V) {
     const result =
       this.haveById(addon.getDetails().id) &&
@@ -68,7 +76,7 @@ export default abstract class AbstractAddonManager<
 
   /**
    * @deprecated
-   * set the addon list without any check
+   * Set the addon list without any check.
    */
   public set(addons: Array<V>) {
     this.addons = addons;

@@ -1,3 +1,6 @@
+/**
+ * Basic details that every addon is expected to have.
+ */
 export type basicAddonDetails = {
   id: string;
   title: string;
@@ -12,6 +15,12 @@ export type basicAddonDetails = {
 
 export type addonType = 'addon' | (string & {});
 
+/**
+ * Basic resources that every addon is expected to have.
+ */
 export type basicAddonResources = {} & Record<string, unknown>;
 
+/**
+ * Basic settings that every addon is expected to have
+ */
 export type basicAddonSettings = {} & Record<string, unknown>;

@@ -56,7 +56,7 @@ beforeAll(() => {
     { id: 'addon2', type: 'other' } as basicAddonDetails,
     {}
   );
-  addonManager = new AddonManager1([], { type: 'addon' });
+  addonManager = new AddonManager1({ type: 'addon' });
 });
 
 describe('correctType', () => {
